@@ -7,7 +7,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "postinstall": "prisma generate",
-    "build": "prisma generate && prisma migrate dev --name init && prisma migrate deploy && nest build",
+    "prisma:generate": "prisma generate",
+    "build": "prisma migrate dev --name init && prisma migrate deploy && nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
