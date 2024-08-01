@@ -1,3 +1,4 @@
+import compression from '@fastify/compress'
 import fastifyCsrf from '@fastify/csrf-protection'
 import { ConfigService } from '@nestjs/config'
 import { NestFactory } from '@nestjs/core'
@@ -23,6 +24,7 @@ async function bootstrap() {
     credentials: true,
   })
 
+  await app.register(compression as any, { encodings: ['gzip', 'deflate'] })
   await app.register(fastifyCsrf as any)
   await app.listen(3000)
 }
