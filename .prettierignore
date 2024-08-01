@@ -1,0 +1,33 @@
+# Ignora todos os arquivos de build
+/dist
+/node_modules
+
+# Ignora arquivos de configuração do NestJS
+/nest-cli.json
+/tsconfig.json
+/tsconfig.build.json
+
+# Ignora arquivos de ambiente
+/.env
+/.env.* 
+
+# Ignora logs
+/logs
+*.log
+
+# Ignora arquivos específicos de testes
+/coverage
+/test
+
+# Ignora arquivos específicos de documentação
+/docs
+
+# Ignora arquivos temporários e de backup
+*.tmp
+*.bak
+
+# Ignora arquivos de configuração do editor e IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
